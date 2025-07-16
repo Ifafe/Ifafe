@@ -51,7 +51,7 @@
 ### 📬 Contato
 
 - 📧 domingosifafe@gmail.com  
-- 🌐 [LinkedIn]([https://linkedin.com/in/seu-usuario](https://www.linkedin.com/in/domingos-manuel-ifafe-88b9aa2b1/))  
+- 🌐  [LinkedIn]([https://linkedin.com/in/seu-usuario](https://www.linkedin.com/in/domingos-manuel-ifafe-88b9aa2b1/)  
 - 🧠 [KAMBAsoft](https://github.com/ifafe)
 
 ---
