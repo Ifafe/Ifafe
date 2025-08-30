@@ -1,14 +1,14 @@
 <h1 align="center">👋 Olá, eu sou o Domingos Manuel Ifafe!</h1>
 
 <p align="center">
-  Desenvolvedor Web Full Stack • Especialista Back-End em Java • Educador e Mentor em Programação
+  Desenvolvedor Full Stack • Especialista Back-End em Java • Educador e Mentor em Programação
 </p>
 
 ---
 
 ### 💼 Sobre mim
 
-- 💻 Programador Web com experiência em **Java**, **Spring**, **MongoDB**, **SQL/NoSQL**, **Maven**, **MySQL**, **C#/.NET Core** e **Node.js**  
+- 💻 Programador Full Stack com experiência em **Java**, **Spring**, **MongoDB**, **SQL/NoSQL**, **Maven**, **MySQL**, **C#/.NET Core** e **Node.js**  
 - 🎓 Técnico de Informática formado, com atuação como professor, mentor e desenvolvedor  
 - 🌍 Portugal | Projetos para ONGs, escolas, empresas e comunidades  
 - ✍️ Escritor de artigos técnicos, evangelista de boas práticas e apaixonado por ensinar  
