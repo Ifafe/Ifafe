@@ -53,20 +53,6 @@ export const dictionaries = {
                               link: "https://sgeikamba.vercel.app/pt",
                               github: "https://github.com/Ifafe/SGEIkamba",
                               image: "/images/sgeikamba-preview.png"
-                        },
-                        {
-                              title: "Flutter Finance App",
-                              description: "Aplicativo de gestão financeira focado em UX, com gráficos dinâmicos e integração Firebase.",
-                              tags: ["Flutter", "Dart", "Firebase", "Charts"],
-                              link: "#",
-                              github: "#"
-                        },
-                        {
-                              title: "Social Task Manager",
-                              description: "Gerenciador de tarefas colaborativo com atualizações em tempo real e sistema de notificações.",
-                              tags: ["Node.js", "React", "Socket.io", "PostgreSQL"],
-                              link: "#",
-                              github: "#"
                         }
                   ]
             }
@@ -123,20 +109,6 @@ export const dictionaries = {
                               link: "https://sgeikamba.vercel.app/pt",
                               github: "https://github.com/Ifafe/SGEIkamba",
                               image: "/images/sgeikamba-preview.png"
-                        },
-                        {
-                              title: "Flutter Finance App",
-                              description: "Finance management app focused on UX, featuring dynamic charts and Firebase integration.",
-                              tags: ["Flutter", "Dart", "Firebase", "Charts"],
-                              link: "#",
-                              github: "#"
-                        },
-                        {
-                              title: "Social Task Manager",
-                              description: "Collaborative task manager with real-time updates and a notification system.",
-                              tags: ["Node.js", "React", "Socket.io", "PostgreSQL"],
-                              link: "#",
-                              github: "#"
                         }
                   ]
             }

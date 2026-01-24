@@ -17,7 +17,7 @@ export function Contact() {
                                     <span className="border-b-4 border-primary pb-2">{t.contact.title}</span>
                               </h2>
 
-                              <div className="flex justify-center gap-8 mt-12">
+                              <div className="flex flex-wrap justify-center gap-8 mt-12">
                                     <a href="mailto:domingosifafe@gmail.com" className="group">
                                           <div className="bg-white/5 p-4 rounded-full border border-white/10 group-hover:bg-primary group-hover:border-primary transition-all">
                                                 <Mail className="w-8 h-8 text-white" />

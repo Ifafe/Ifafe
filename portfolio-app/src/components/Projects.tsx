@@ -19,7 +19,7 @@ export function Projects() {
                               </h2>
                         </motion.div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
                               {t.projects.list.map((project, index) => (
                                     <motion.div
                                           key={project.title}
@@ -28,10 +28,10 @@ export function Projects() {
                                           viewport={{ once: true }}
                                           transition={{ delay: index * 0.1 }}
                                           whileHover={{ y: -10 }}
-                                          className="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all group"
+                                          className="w-full md:max-w-[calc(50%-1rem)] lg:max-w-[calc(33.333%-1rem)] bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all group flex flex-col"
                                     >
                                           {/* Project Image */}
-                                          <div className="h-48 relative overflow-hidden bg-gradient-to-br from-primary/30 to-purple-900/30">
+                                          <div className="h-48 relative overflow-hidden bg-gradient-to-br from-primary/30 to-purple-900/30 shrink-0">
                                                 {'image' in project ? (
                                                       <img
                                                             src={(project as any).image}
@@ -54,16 +54,16 @@ export function Projects() {
                                                 </div>
                                           </div>
 
-                                          <div className="p-6">
+                                          <div className="p-6 flex flex-col flex-grow">
                                                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors">
                                                       {project.title}
                                                 </h3>
-                                                <p className="text-gray-400 text-sm mb-6 line-clamp-2">
+                                                <p className="text-gray-400 text-sm mb-6 line-clamp-2 flex-grow">
                                                       {project.description}
                                                 </p>
 
-                                                <div className="flex gap-3">
-                                                      {project.github && project.github !== '#' && (
+                                                <div className="flex gap-3 mt-auto">
+                                                      {project.github && (project.github as string) !== '#' && (
                                                             <a
                                                                   href={project.github}
                                                                   target="_blank"
@@ -74,7 +74,7 @@ export function Projects() {
                                                                   {t.projects.viewCode}
                                                             </a>
                                                       )}
-                                                      {project.link && project.link !== '#' && (
+                                                      {project.link && (project.link as string) !== '#' && (
                                                             <a
                                                                   href={project.link}
                                                                   target="_blank"
