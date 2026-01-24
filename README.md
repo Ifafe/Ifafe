@@ -4,6 +4,11 @@
   Desenvolvedor Full Stack • Especialista Back-End em Java • Educador e Mentor em Programação
 </p>
 
+<p align="center">
+  🌐 <strong>Website Oficial:</strong>
+  <a href="https://ifafe.vercel.app" target="_blank">https://ifafe.vercel.app</a>
+</p>
+
 ---
 
 ### 💼 Sobre mim
@@ -13,6 +18,20 @@
 - 🎓 Técnico de Informática formado, com atuação como professor, mentor e desenvolvedor.
 - 🌍 Portugal | Projetos para ONGs, escolas, empresas e comunidades.
 - ✍️ Escritor de artigos técnicos, evangelista de boas práticas e apaixonado por ensinar.
+
+---
+
+### 🌐 Portfólio Online
+
+🔗 **Acesse:** [https://ifafe.vercel.app](https://ifafe.vercel.app)
+
+Meu espaço digital onde apresento:
+- 🚀 Projetos Full Stack e Mobile  
+- 🧠 Tecnologias e stacks que utilizo  
+- 🎓 Atuação como desenvolvedor, educador e mentor  
+- 📬 Canais de contacto profissional  
+
+> *Um portfólio criado para demonstrar não apenas código, mas propósito, impacto social e boas práticas em engenharia de software.*
 
 ---
 
@@ -31,6 +50,7 @@
 ### 🚀 Tecnologias e Ferramentas
 
 **Mobile & Frontend**
+
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -40,6 +60,7 @@
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 **Backend & Database**
+
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
@@ -50,11 +71,10 @@
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
 **Tools & DevOps**
+
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-
 
 ---
 
@@ -84,4 +104,4 @@
 
 ---
 
-> *"Transformando ideias em soluções digitais que impactam positivamente o mundo."*  
+> *"Transformando ideias em soluções digitais que impactam positivamente o mundo."*
