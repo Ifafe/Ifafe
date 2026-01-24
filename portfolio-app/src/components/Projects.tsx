@@ -30,15 +30,23 @@ export function Projects() {
                                           whileHover={{ y: -10 }}
                                           className="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all group"
                                     >
-                                          {/* Project Image Placeholder */}
-                                          <div className="h-48 bg-gradient-to-br from-primary/30 to-purple-900/30 relative overflow-hidden">
-                                                <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
-                                                      <div className="w-24 h-24 rounded-full bg-white/10 blur-2xl" />
-                                                </div>
-                                                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-dark/80 to-transparent">
-                                                      <div className="flex gap-2">
+                                          {/* Project Image */}
+                                          <div className="h-48 relative overflow-hidden bg-gradient-to-br from-primary/30 to-purple-900/30">
+                                                {'image' in project ? (
+                                                      <img
+                                                            src={(project as any).image}
+                                                            alt={project.title}
+                                                            className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                                                      />
+                                                ) : (
+                                                      <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+                                                            <div className="w-24 h-24 rounded-full bg-white/10 blur-2xl" />
+                                                      </div>
+                                                )}
+                                                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-dark via-dark/80 to-transparent pt-8">
+                                                      <div className="flex gap-2 overflow-x-auto no-scrollbar scroll-smooth">
                                                             {project.tags.map(tag => (
-                                                                  <span key={tag} className="text-[10px] uppercase tracking-wider bg-primary/20 text-blue-300 px-2 py-1 rounded-md border border-primary/20">
+                                                                  <span key={tag} className="text-[10px] uppercase tracking-wider bg-primary/20 text-blue-300 px-2 py-1 rounded-md border border-primary/20 backdrop-blur-sm whitespace-nowrap">
                                                                         {tag}
                                                                   </span>
                                                             ))}

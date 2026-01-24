@@ -51,7 +51,8 @@ export const dictionaries = {
                               description: "Plataforma SaaS multi-tenant completa para gestão escolar com dashboard analítico, automação financeira, audit logging e internacionalização PT/EN.",
                               tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "SaaS"],
                               link: "https://sgeikamba.vercel.app/pt",
-                              github: "https://github.com/Ifafe/SGEIkamba"
+                              github: "https://github.com/Ifafe/SGEIkamba",
+                              image: "/images/sgeikamba-preview.png"
                         },
                         {
                               title: "Flutter Finance App",
@@ -120,7 +121,8 @@ export const dictionaries = {
                               description: "Complete multi-tenant SaaS platform for school management with analytical dashboard, financial automation, audit logging, and PT/EN internationalization.",
                               tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "SaaS"],
                               link: "https://sgeikamba.vercel.app/pt",
-                              github: "https://github.com/Ifafe/SGEIkamba"
+                              github: "https://github.com/Ifafe/SGEIkamba",
+                              image: "/images/sgeikamba-preview.png"
                         },
                         {
                               title: "Flutter Finance App",
