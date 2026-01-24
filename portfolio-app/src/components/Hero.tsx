@@ -43,7 +43,7 @@ export function Hero() {
                                           {t.hero.cta}
                                     </button>
                                     <a
-                                          href="https://github.com/Ifafe/Ifafe"
+                                          href="https://github.com/Ifafe"
                                           target="_blank"
                                           rel="noopener noreferrer"
                                           className="border border-white/20 hover:bg-white/10 text-white px-8 py-3 rounded-full font-medium transition-colors inline-flex items-center justify-center"
