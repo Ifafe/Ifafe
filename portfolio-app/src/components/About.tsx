@@ -1,29 +1,30 @@
 import { useLanguage } from '../lib/LanguageContext';
 import { motion } from 'framer-motion';
+import { Server, Smartphone, GraduationCap } from 'lucide-react';
 
 const cards = [
 	{
-		number: '01',
+		icon: Server,
 		colorVar: 'primary',
-		borderHover: 'hover:border-primary/30',
-		bgColor: 'bg-primary/20',
-		textColor: 'text-primary',
+		borderHover: 'hover:border-primary/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]',
+		bgColor: 'bg-primary/10',
+		iconColor: 'text-primary',
 		key: 'backend' as const,
 	},
 	{
-		number: '02',
+		icon: Smartphone,
 		colorVar: 'secondary',
-		borderHover: 'hover:border-secondary/30',
-		bgColor: 'bg-secondary/20',
-		textColor: 'text-secondary',
+		borderHover: 'hover:border-secondary/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]',
+		bgColor: 'bg-secondary/10',
+		iconColor: 'text-secondary',
 		key: 'mobile' as const,
 	},
 	{
-		number: '03',
+		icon: GraduationCap,
 		colorVar: 'green',
-		borderHover: 'hover:border-green-500/30',
-		bgColor: 'bg-green-500/20',
-		textColor: 'text-green-400',
+		borderHover: 'hover:border-green-500/50 hover:shadow-[0_0_30px_rgba(34,197,94,0.3)]',
+		bgColor: 'bg-green-500/10',
+		iconColor: 'text-green-400',
 		key: 'education' as const,
 	},
 ];
@@ -72,10 +73,10 @@ export function About() {
 									i === 2 ? 'sm:col-span-2 lg:col-span-1' : ''
 								}`}
 							>
-								<div className={`w-12 md:w-14 h-12 md:h-14 rounded-xl md:rounded-2xl ${card.bgColor} flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 transition-transform`}>
-									<h3 className={`text-xl md:text-2xl font-black ${card.textColor}`}>{card.number}</h3>
+								<div className={`w-14 md:w-16 h-14 md:h-16 rounded-2xl md:rounded-3xl ${card.bgColor} flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300 shadow-lg`}>
+									<card.icon className={`w-7 h-7 md:w-8 md:h-8 ${card.iconColor}`} strokeWidth={2.5} />
 								</div>
-								<h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">
+								<h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
 									{t.aboutCards[card.key].title}
 								</h3>
 								<p className="text-gray-400 leading-relaxed text-xs md:text-sm">
