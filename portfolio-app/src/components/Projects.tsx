@@ -1,96 +1,121 @@
 import { useLanguage } from '../lib/LanguageContext';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Code } from 'lucide-react';
 
 export function Projects() {
-      const { t } = useLanguage();
+	const { t } = useLanguage();
 
-      return (
-            <section className="py-20 bg-dark" id="projects">
-                  <div className="container mx-auto px-4">
-                        <motion.div
-                              initial={{ opacity: 0, y: 20 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              viewport={{ once: true }}
-                              className="text-center mb-16"
-                        >
-                              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                                    <span className="border-b-4 border-primary pb-2">{t.projects.title}</span>
-                              </h2>
-                        </motion.div>
+	return (
+		<section className="py-20 md:py-32 bg-dark relative overflow-hidden" id="projects">
+			{/* Side Glows - Resized for mobile */}
+			<div className="absolute top-1/2 left-0 w-48 md:w-64 h-48 md:h-64 bg-primary/10 rounded-full blur-[80px] md:blur-[100px] -translate-x-1/2" />
+			<div className="absolute top-1/3 right-0 w-48 md:w-64 h-48 md:h-64 bg-secondary/10 rounded-full blur-[80px] md:blur-[100px] translate-x-1/2" />
 
-                        <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
-                              {t.projects.list.map((project, index) => (
-                                    <motion.div
-                                          key={project.title}
-                                          initial={{ opacity: 0, y: 20 }}
-                                          whileInView={{ opacity: 1, y: 0 }}
-                                          viewport={{ once: true }}
-                                          transition={{ delay: index * 0.1 }}
-                                          whileHover={{ y: -10 }}
-                                          className="w-full md:max-w-[calc(50%-1rem)] lg:max-w-[calc(33.333%-1rem)] bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all group flex flex-col"
-                                    >
-                                          {/* Project Image */}
-                                          <div className="h-48 relative overflow-hidden bg-gradient-to-br from-primary/30 to-purple-900/30 shrink-0">
-                                                {'image' in project ? (
-                                                      <img
-                                                            src={(project as any).image}
-                                                            alt={project.title}
-                                                            className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
-                                                      />
-                                                ) : (
-                                                      <div className="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
-                                                            <div className="w-24 h-24 rounded-full bg-white/10 blur-2xl" />
-                                                      </div>
-                                                )}
-                                                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-dark via-dark/80 to-transparent pt-8">
-                                                      <div className="flex gap-2 overflow-x-auto no-scrollbar scroll-smooth">
-                                                            {project.tags.map(tag => (
-                                                                  <span key={tag} className="text-[10px] uppercase tracking-wider bg-primary/20 text-blue-300 px-2 py-1 rounded-md border border-primary/20 backdrop-blur-sm whitespace-nowrap">
-                                                                        {tag}
-                                                                  </span>
-                                                            ))}
-                                                      </div>
-                                                </div>
-                                          </div>
+			<div className="container mx-auto px-4 relative z-10">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					className="text-center mb-16 md:mb-20"
+				>
+					<h2 className="text-3xl md:text-5xl font-black mb-4 md:mb-6 text-white tracking-tight">
+						{t.projects.title}
+					</h2>
+					<div className="w-20 md:w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+				</motion.div>
 
-                                          <div className="p-6 flex flex-col flex-grow">
-                                                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-primary transition-colors">
-                                                      {project.title}
-                                                </h3>
-                                                <p className="text-gray-400 text-sm mb-6 line-clamp-2 flex-grow">
-                                                      {project.description}
-                                                </p>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-7xl mx-auto">
+					{t.projects.list.map((project, index) => (
+						<motion.div
+							key={project.title}
+							initial={{ opacity: 0, y: 30 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ delay: index * 0.1, duration: 0.5 }}
+							whileHover={{ y: -12 }}
+							className="glass-card glass-card-hover rounded-2xl md:rounded-[2rem] overflow-hidden flex flex-col group h-full border-white/5"
+						>
+							{/* Project Image Container */}
+							<div className="h-48 md:h-56 relative overflow-hidden shrink-0">
+								{/* Image Overlay - Primary tint */}
+								<div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 z-10 opacity-40 group-hover:opacity-20 transition-opacity" />
+								
+								{/* Readability Gradient - Bottom heavy dark fade */}
+								<div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent z-15 opacity-80" />
 
-                                                <div className="flex gap-3 mt-auto">
-                                                      {project.github && (project.github as string) !== '#' && (
-                                                            <a
-                                                                  href={project.github}
-                                                                  target="_blank"
-                                                                  rel="noopener noreferrer"
-                                                                  className="flex items-center gap-2 px-4 py-2 text-xs font-medium bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 hover:border-primary/50 rounded-lg transition-all"
-                                                            >
-                                                                  <Github size={16} />
-                                                                  {t.projects.viewCode}
-                                                            </a>
-                                                      )}
-                                                      {project.link && (project.link as string) !== '#' && (
-                                                            <a
-                                                                  href={project.link}
-                                                                  target="_blank"
-                                                                  rel="noopener noreferrer"
-                                                                  className="flex items-center gap-2 px-4 py-2 text-xs font-medium bg-primary/20 hover:bg-primary/30 text-blue-300 hover:text-white border border-primary/30 hover:border-primary rounded-lg transition-all"
-                                                            >
-                                                                  <ExternalLink size={16} />
-                                                                  {t.projects.viewLive}
-                                                            </a>
-                                                      )}
-                                                </div>
-                                          </div>
-                                    </motion.div>
-                              ))}
-                        </div>
-                  </div>
-            </section>
-      );
+								{project.image ? (
+									<img
+										src={project.image}
+										alt={project.title}
+										className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+									/>
+								) : (
+									<div className="absolute inset-0 flex items-center justify-center bg-dark-lighter">
+										<Code size={40} className="md:size-48 text-primary/20" />
+									</div>
+								)}
+								
+								{/* Floating Tags - Always on dark gradient for visibility */}
+								<div className="absolute inset-x-0 bottom-0 p-4 md:p-6 z-20 translate-y-2 group-hover:translate-y-0 transition-transform">
+									<div className="flex flex-wrap gap-2">
+										{project.tags.map(tag => (
+											<span key={tag} className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider backdrop-blur-md bg-white/10 text-white px-2.5 md:px-3 py-1 md:py-1.5 rounded-full border border-white/20 shadow-lg">
+												{tag}
+											</span>
+										))}
+									</div>
+								</div>
+							</div>
+
+							{/* Project Content */}
+							<div className="p-6 md:p-8 flex flex-col flex-grow">
+								<h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-white group-hover:text-primary-light transition-colors">
+									{project.title}
+								</h3>
+								<p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-6">
+									{project.description}
+								</p>
+
+								{/* Tech Details Tooltip */}
+								<div className="mb-6 md:mb-8 p-3 md:p-4 bg-primary/5 rounded-xl md:rounded-2xl border border-primary/10 transition-all duration-300">
+									<h4 className="text-[9px] md:text-[10px] font-black text-primary-light uppercase tracking-[0.2em] mb-1.5 md:mb-2">{t.projects.details}</h4>
+									<p className="text-[10px] md:text-xs text-blue-100/70 italic leading-snug">
+										"{project.techDetails}"
+									</p>
+								</div>
+
+								{/* Action Buttons */}
+								<div className="flex flex-wrap sm:flex-nowrap gap-3 md:gap-4 mt-auto">
+									{project.github && project.github !== '#' && (
+										<a
+											href={project.github}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-2.5 md:py-3 px-4 glass-card hover:bg-white/10 text-xs md:text-sm font-bold text-white rounded-xl transition-all"
+										>
+											<Github size={16} md:size={18} />
+											<span className="whitespace-nowrap">{t.projects.viewCode}</span>
+										</a>
+									)}
+									{project.link && project.link !== '#' && (
+										<a
+											href={project.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-2.5 md:py-3 px-4 bg-white text-dark hover:bg-primary-light hover:text-white text-xs md:text-sm font-bold rounded-xl transition-all shadow-lg"
+										>
+											<ExternalLink size={16} md:size={18} />
+											<span className="whitespace-nowrap">{t.projects.viewLive}</span>
+										</a>
+									)}
+								</div>
+							</div>
+						</motion.div>
+					))}
+				</div>
+			</div>
+		</section>
+	);
 }
+
+

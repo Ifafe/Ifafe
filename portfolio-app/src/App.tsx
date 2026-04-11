@@ -1,4 +1,4 @@
-import { LanguageSwitcher } from './components/LanguageSwitcher';
+import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Skills } from './components/Skills';
@@ -8,8 +8,8 @@ import { useLanguage } from './lib/LanguageContext';
 
 function App() {
   return (
-    <div className="bg-dark min-h-screen text-white font-sans selection:bg-accent selection:text-dark">
-      <LanguageSwitcher />
+    <div className="bg-dark min-h-screen text-white font-sans selection:bg-primary/30 selection:text-white overflow-x-hidden">
+      <Navbar />
       <main>
         <Hero />
         <About />
@@ -18,8 +18,10 @@ function App() {
         <Contact />
       </main>
 
-      <footer className="py-6 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} Domingos Manuel Ifafe. {useLanguage().t.footer.text}
+      <footer className="py-8 text-center text-gray-600 text-xs border-t border-white/5">
+        <span className="text-gradient-primary font-bold">DI</span>
+        {' '}© {new Date().getFullYear()} Domingos Manuel Ifafe.
+        <span className="ml-2">{useLanguage().t.footer.text}</span>
       </footer>
     </div>
   );
