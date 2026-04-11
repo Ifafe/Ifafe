@@ -85,7 +85,7 @@ export function Navbar() {
 							onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 							className="font-black text-xl tracking-tight"
 						>
-							<span className="text-gradient-primary">DI</span>
+							<span className="text-gradient-primary">D'Ifafe</span>
 							<span className="text-white/30">.</span>
 						</motion.button>
 

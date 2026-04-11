@@ -37,54 +37,62 @@ export function About() {
 			{/* Decorative Elements */}
 			<div className="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-primary/5 rounded-full blur-[80px] md:blur-[100px] -mr-32 md:-mr-48 -mt-32 md:-mt-48" />
 
-			<div className="container mx-auto px-4 relative z-10">
-				<div className="flex flex-col lg:flex-row gap-12 md:gap-20 items-start">
-					<motion.div
-						initial={{ opacity: 0, x: -30 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true }}
-						className="lg:w-2/5 text-center lg:text-left lg:sticky lg:top-28"
-					>
-						<h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-10 text-white tracking-tight">
-							{t.about.title}
-						</h2>
-						<p className="text-base md:text-xl text-gray-400 leading-relaxed mb-8 md:mb-10 font-medium">
-							{t.about.description}
-						</p>
-						<div className="h-1.5 w-24 md:w-32 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto lg:mx-0" />
-					</motion.div>
+			<div className="container mx-auto px-4 max-w-7xl relative z-10">
+				<div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start relative">
+					
+					{/* Left Side: Sticky Title and Intro */}
+					<div className="lg:w-[45%] lg:sticky lg:top-32 pt-4 z-20">
+						<motion.div
+							initial={{ opacity: 0, x: -30 }}
+							whileInView={{ opacity: 1, x: 0 }}
+							viewport={{ once: true }}
+						>
+							<h2 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 text-white tracking-tight leading-tight">
+								{t.about.title}
+								<span className="text-primary">.</span>
+							</h2>
+							<div className="h-2 w-24 bg-gradient-to-r from-primary to-secondary rounded-full mb-10" />
+							<p className="text-lg md:text-2xl text-gray-300 leading-relaxed font-medium">
+								{t.about.description}
+							</p>
+						</motion.div>
+					</div>
 
-					<motion.div
-						initial={{ opacity: 0, x: 30 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true }}
-						className="lg:w-3/5 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 w-full"
-					>
+					{/* Right Side: Scrollable Narrative Cards */}
+					<div className="lg:w-[55%] flex flex-col gap-16 md:gap-32 lg:pb-32 mt-12 lg:mt-0 relative z-10">
 						{cards.map((card, i) => (
 							<motion.div
 								key={card.key}
-								initial={{ opacity: 0, y: 20 }}
+								initial={{ opacity: 0, y: 50 }}
 								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true }}
-								transition={{ delay: i * 0.1 }}
-								whileHover={{ y: -6 }}
-								className={`glass-card p-8 md:p-10 rounded-2xl md:rounded-[3rem] border-white/5 group ${card.borderHover} transition-all ${
-									// 3rd card spans full width on sm
-									i === 2 ? 'sm:col-span-2 lg:col-span-1' : ''
-								}`}
+								viewport={{ once: true, margin: "-100px" }}
+								transition={{ duration: 0.6, ease: "easeOut" }}
+								className={`glass-card p-8 md:p-14 rounded-3xl border-white/5 relative overflow-hidden group hover:border-white/10 transition-colors duration-500`}
 							>
-								<div className={`w-14 md:w-16 h-14 md:h-16 rounded-2xl md:rounded-3xl ${card.bgColor} flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300 shadow-lg`}>
-									<card.icon className={`w-7 h-7 md:w-8 md:h-8 ${card.iconColor}`} strokeWidth={2.5} />
+								{/* Huge Background Watermark Number */}
+								<div className="absolute top-2 -right-4 font-black text-[120px] leading-none opacity-[0.03] text-white pointer-events-none transition-transform duration-700 group-hover:-translate-y-4 group-hover:-translate-x-4">
+									0{i + 1}
 								</div>
-								<h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
-									{t.aboutCards[card.key].title}
-								</h3>
-								<p className="text-gray-400 leading-relaxed text-xs md:text-sm">
-									{t.aboutCards[card.key].desc}
-								</p>
+
+								{/* Subtle background glow effect for the card */}
+								<div className={`absolute -left-20 -top-20 w-64 h-64 blur-[80px] ${card.bgColor} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+								
+								<div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl ${card.bgColor} flex items-center justify-center mb-8 shadow-2xl relative z-10 
+								transform group-hover:rotate-6 transition-transform duration-500 border border-white/5`}>
+									<card.icon className={`w-8 h-8 md:w-10 md:h-10 ${card.iconColor}`} strokeWidth={2} />
+								</div>
+								
+								<div className="relative z-10 max-w-xl">
+									<h3 className="text-2xl md:text-3xl font-bold mb-6 text-white tracking-tight">
+										{t.aboutCards[card.key].title}
+									</h3>
+									<p className="text-gray-400 leading-relaxed text-base md:text-lg">
+										{t.aboutCards[card.key].desc}
+									</p>
+								</div>
 							</motion.div>
 						))}
-					</motion.div>
+					</div>
 				</div>
 			</div>
 		</section>

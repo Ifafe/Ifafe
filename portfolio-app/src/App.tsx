@@ -23,7 +23,7 @@ function App() {
   ];
 
   return (
-    <div className="bg-dark min-h-screen text-white font-sans selection:bg-primary/30 selection:text-white overflow-x-hidden">
+    <div className="bg-dark min-h-screen text-white font-sans selection:bg-primary/30 selection:text-white overflow-x-clip">
       <Navbar />
       <main>
         <Hero />
