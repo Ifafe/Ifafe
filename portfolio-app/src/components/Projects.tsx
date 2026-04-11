@@ -93,7 +93,7 @@ export function Projects() {
 											rel="noopener noreferrer"
 											className="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-2.5 md:py-3 px-4 glass-card hover:bg-white/10 text-xs md:text-sm font-bold text-white rounded-xl transition-all"
 										>
-											<Github size={16} md:size={18} />
+											<Github size={18} />
 											<span className="whitespace-nowrap">{t.projects.viewCode}</span>
 										</a>
 									)}
@@ -104,7 +104,7 @@ export function Projects() {
 											rel="noopener noreferrer"
 											className="flex-1 min-w-[120px] flex items-center justify-center gap-2 py-2.5 md:py-3 px-4 bg-white text-dark hover:bg-primary-light hover:text-white text-xs md:text-sm font-bold rounded-xl transition-all shadow-lg"
 										>
-											<ExternalLink size={16} md:size={18} />
+											<ExternalLink size={18} />
 											<span className="whitespace-nowrap">{t.projects.viewLive}</span>
 										</a>
 									)}
