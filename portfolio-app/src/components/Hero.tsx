@@ -86,7 +86,7 @@ export function Hero() {
 						transition={{ duration: 0.6, delay: 0.2 }}
 					>
 						<h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold mb-4 tracking-tight leading-[1.1]">
-							<span className="opacity-50 font-light block text-base md:text-xl mb-3">{t.hero.greeting}</span>
+							<span className="opacity-50 font-light block text-base md:text-xl mb-3 tracking-normal">{t.hero.greeting}</span>
 							<span className="text-gradient">Domingos Manuel</span>
 							<br />
 							<span className="text-gradient-primary">Ifafe</span>
