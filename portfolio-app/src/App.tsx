@@ -40,7 +40,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
             {/* Brand */}
             <div className="text-center md:text-left">
-              <span className="text-gradient-primary font-black text-2xl">DI</span>
+              <span className="text-gradient-primary font-black text-2xl">D'Ifafe<span className="text-white/30">.</span></span>
               <p className="text-gray-600 text-xs mt-1 max-w-xs">
                 {t.footer.text}
               </p>
