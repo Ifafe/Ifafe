@@ -77,6 +77,15 @@ export const dictionaries = {
 					techDetails: "Arquitetura monolítica modularizada com Prisma ORM, gestão de mídia binária e sistema de estatísticas de visitantes integrado."
 				},
 				{
+					title: "CvnetTec - Loja Tecnológica",
+					description: "Plataforma de e-commerce especializada em componentes e acessórios mobile. Loja completa com catálogo de produtos, categorias por marca e sistema de carrinho.",
+					tags: ["Next.js", "TypeScript", "E-commerce", "TailwindCSS"],
+					link: "http://cvnettec.co.ao/",
+					github: "#",
+					image: "/images/cvnettec-preview.png",
+					techDetails: "Loja online com catálogo dinâmico de produtos, filtros por categoria e marca, sistema de carrinho e modo claro/escuro."
+				},
+				{
 					title: "SGEIKamba - Gestão Escolar",
 					description: "Plataforma SaaS multi-tenant completa para gestão escolar com dashboard analítico, automação financeira e audit logging.",
 					tags: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "SaaS"],
@@ -93,15 +102,6 @@ export const dictionaries = {
 					github: "https://github.com/Ifafe/biometricoMovel",
 					image: "/images/biometrico-preview.png",
 					techDetails: "Sincronização em tempo real com Supabase, autenticação JWT e interface adaptativa seguindo os padrões Material Design 3."
-				},
-				{
-					title: "CvnetTec - Loja Tecnológica",
-					description: "Plataforma de e-commerce especializada em componentes e acessórios mobile. Loja completa com catálogo de produtos, categorias por marca e sistema de carrinho.",
-					tags: ["Next.js", "TypeScript", "E-commerce", "TailwindCSS"],
-					link: "http://cvnettec.co.ao/",
-					github: "#",
-					image: "/images/cvnettec-preview.png",
-					techDetails: "Loja online com catálogo dinâmico de produtos, filtros por categoria e marca, sistema de carrinho e modo claro/escuro."
 				}
 			]
 		},
