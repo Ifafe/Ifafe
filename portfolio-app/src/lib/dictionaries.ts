@@ -98,7 +98,7 @@ export const dictionaries = {
 					title: "CvnetTec - Loja Tecnológica",
 					description: "Plataforma de e-commerce especializada em componentes e acessórios mobile. Loja completa com catálogo de produtos, categorias por marca e sistema de carrinho.",
 					tags: ["Next.js", "TypeScript", "E-commerce", "TailwindCSS"],
-					link: "https://cvnet-tec.vercel.app/",
+					link: "http://cvnettec.co.ao/",
 					github: "#",
 					image: "/images/cvnettec-preview.png",
 					techDetails: "Loja online com catálogo dinâmico de produtos, filtros por categoria e marca, sistema de carrinho e modo claro/escuro."
